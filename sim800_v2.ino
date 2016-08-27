@@ -1,3 +1,5 @@
+//proyecto en pruba
+
 #include <SoftwareSerial.h>
 
 SoftwareSerial sim800l(10,11); //RX - TX  
@@ -35,7 +37,7 @@ void env_sms()
  sim800l.println(F("AT+CMGF=1"));
  delay(500);
 if (res_at(debug(),"OK")){
- sim800l.println(F("AT+CMGS=\"+542996321848\""));//no me llamen jeje
+ sim800l.println(F("AT+CMGS=\"+542996321848\""));//
 delay(500); 
   if(res_at(debug(),">")){
     sim800l.println(F("ardu rack"));
